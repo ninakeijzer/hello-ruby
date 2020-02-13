@@ -9,6 +9,22 @@
 # Currently it is 67 degrees and sunny. Tomorrow it will be 65 and Mostly Cloudy.
 # The next day it we will see Partly Cloudy skies, with a temperature of 70.
 
+weather_forecast = {
+    today: {
+        temperature: 67,
+        skies: "sunny"
+        }, 
+    tomorrow: {
+        temperature: 65,
+        skies: "mostly cloudy"
+        },
+    day_after_tomorrow: {
+        temperature: 70,
+        skies: "partly cloudy"
+        }
+        }
+puts weather_forecast
+
 # HINT
 # String interpolation is a fancy term for "we don't have
 # to add strings together using the plus sign anymore"
@@ -26,4 +42,8 @@ weather_data = {
     { temperature: 70, conditions: "Partly Cloudy" }
   ]
 }
+
+puts "Currently it is #{weather_data[:current][:temperature]} degrees and #{weather_data[:current][:conditions].downcase}."
+puts "Tomorrow it will be #{weather_data[:forecast][0][:temperature]} and #{weather_data[:forecast][0][:conditions].downcase}."
+puts "The next day we will see #{weather_data[:forecast][1][:conditions]} skies, with a temperature of #{weather_data[:forecast][1][:temperature].downcase}."
 
